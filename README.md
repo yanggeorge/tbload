@@ -36,7 +36,7 @@ Use "tbload [command] -h" for more information about a command.
 
 We use `demo.thingsboard.io` to show the example. The username is my account.
 
-1. create devices on demo.thingsboard.io`
+### 1. create devices on demo.thingsboard.io`
 ```bash
 $ tbload init -serverHost http://demo.thingsboard.io -username alenym@gmail.com -password 123456 -deviceNum 1
 created device[_tbload_device_0]
@@ -44,7 +44,7 @@ created device[_tbload_device_0]
 The device with deviceName="_tbload_device_0" has been created And devices' info has been kept in `store.db` file.
 If you sign in `demo.thingsboard.io` with username `alenym@gmail.com` and password `123456`, "_tbload_device_0" will be there.
 
-2. show the created devices info
+### 2. show the created devices info
 ```bash
 $ tbload info -d
 key-values in store:
@@ -52,7 +52,7 @@ key-values in store:
 - key=_tbload_init_cmd_info, value={"serverHost":"http://demo.thingsboard.io","username":"alenym@gmail.com","password":"123456","deviceNum":1}
 ```
 
-3. mqtt load test
+### 3. run mqtt load test
 
 The broker url is `tcp://demo.thingsboard.io:1883`.
 
@@ -84,7 +84,7 @@ Median: 15 msg/sec
   < 15 msg/sec  100%
 ```
 
-4. delete created test devices.
+### 4. delete created test devices.
 ```bash
 $ tbload clean
 {ServerHost:http://demo.thingsboard.io Username:alenym@gmail.com Password:123456 DeviceNum:1}

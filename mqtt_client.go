@@ -59,6 +59,8 @@ func (c *MqttClient) ConnectAndWait(totalTimeout, connectTimeout time.Duration) 
 			err := token.Error()
 			if connected && err == nil {
 				return true, nil
+			} else if err != nil {
+				return false, err
 			}
 			fmt.Printf("retry [%s]\n", c.Id)
 		}
